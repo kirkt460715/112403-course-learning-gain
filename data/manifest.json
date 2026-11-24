@@ -27,6 +27,7 @@
         "response_id",
         "person_token",
         "session_id",
+        "phase",
         "form_version",
         "item_id",
         "answer",
