@@ -44,6 +44,46 @@
         "valid_from",
         "valid_to"
       ]
+    },
+    {
+      "file": "answer_keys.csv",
+      "optional": true,
+      "columns": [
+        "form_version",
+        "item_id",
+        "correct_answer",
+        "key_version",
+        "valid_from",
+        "valid_to"
+      ]
+    },
+    {
+      "file": "observations.csv",
+      "optional": true,
+      "columns": [
+        "observation_id",
+        "person_token",
+        "household_token",
+        "session_id",
+        "stage",
+        "result",
+        "note"
+      ],
+      "key": "observation_id"
+    },
+    {
+      "file": "feedback.csv",
+      "optional": true,
+      "columns": [
+        "feedback_id",
+        "household_token",
+        "session_id",
+        "submitted_by",
+        "rating",
+        "confidence",
+        "submitted_at"
+      ],
+      "key": "feedback_id"
     }
   ]
 }

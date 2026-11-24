@@ -4,11 +4,15 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 
-def inspect_inputs():
-    manifest = json.loads((ROOT / "data" / "manifest.json").read_text(encoding="utf-8"))
+
+def inspect_inputs(data_dir=None):
+    base = Path(data_dir) if data_dir else ROOT / "data"
+    manifest = json.loads((base / "manifest.json").read_text(encoding="utf-8"))
     counts = {}
     for table in manifest["tables"]:
-        path = ROOT / "data" / table["file"]
+        path = base / table["file"]
+        if table.get("optional") and not path.exists():
+            continue
         with path.open(encoding="utf-8", newline="") as stream:
             reader = csv.DictReader(stream)
             if reader.fieldnames != table["columns"]:
@@ -21,6 +25,7 @@ def inspect_inputs():
                 raise ValueError(f"{table['file']}: duplicate {key}")
         counts[table["file"]] = len(rows)
     return counts
+
 
 if __name__ == "__main__":
     for filename, count in inspect_inputs().items():

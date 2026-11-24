@@ -1,0 +1,918 @@
+{
+  "generated_at": "2026-11-24T13:18:19+00:00",
+  "tool_version": "1.0.0",
+  "input_provenance": {
+    "data_dir": "/workspace/data",
+    "present_files": [
+      "sessions.csv",
+      "attendance.csv",
+      "responses.csv",
+      "measurements.csv",
+      "answer_keys.csv",
+      "observations.csv",
+      "feedback.csv"
+    ],
+    "missing_optional_files": [],
+    "file_hashes": {
+      "manifest.json": "b3c5852807eb32d50b5cd89c6408565fb8fe1ae30a4b7ccb0b59e1d86f4eac8c",
+      "sessions.csv": "6b6ba4e871b95f2e867dd58929a092b479de366f4035c7360e7f9729a3b5840b",
+      "attendance.csv": "948059b716be740ce76388b333fb35149825d394fc25695eeaf2dc6acdcfa3d2",
+      "responses.csv": "ee104348ba2e040247c772c64e8e55bf38e1f8957e2ddc8c270781bfbc634d83",
+      "measurements.csv": "51213b985b3e745ab71f276b0f0abdc7240f55aa2a7bc42dbc8fda51a7324add",
+      "answer_keys.csv": "49d2c3c57c6460d4043d6854c19bcac6f29e7f0a86f4ef9b81fb70368f6452a8",
+      "observations.csv": "4378b9b9868d2be9ec25799bd94336def0ad15307b1766dae81fce00799259b2",
+      "feedback.csv": "b412c2c1d8f351817e42c03d24f834b77df248fa52082e0c277666ab78e727fb"
+    },
+    "row_counts": {
+      "sessions.csv": 4,
+      "attendance.csv": 8,
+      "responses.csv": 5,
+      "measurements.csv": 3,
+      "answer_keys.csv": 3,
+      "observations.csv": 2,
+      "feedback.csv": 2,
+      "manifest.json": 7
+    },
+    "manifest": {
+      "tables": [
+        {
+          "file": "sessions.csv",
+          "columns": [
+            "session_id",
+            "course_version",
+            "topic",
+            "start_date",
+            "end_date"
+          ],
+          "key": "session_id"
+        },
+        {
+          "file": "attendance.csv",
+          "columns": [
+            "person_token",
+            "household_token",
+            "session_id",
+            "stage",
+            "status"
+          ]
+        },
+        {
+          "file": "responses.csv",
+          "columns": [
+            "response_id",
+            "person_token",
+            "session_id",
+            "phase",
+            "form_version",
+            "item_id",
+            "answer",
+            "submitted_at"
+          ],
+          "key": "response_id"
+        },
+        {
+          "file": "measurements.csv",
+          "columns": [
+            "form_version",
+            "item_id",
+            "topic",
+            "valid_from",
+            "valid_to"
+          ]
+        },
+        {
+          "file": "answer_keys.csv",
+          "optional": true,
+          "columns": [
+            "form_version",
+            "item_id",
+            "correct_answer",
+            "key_version",
+            "valid_from",
+            "valid_to"
+          ]
+        },
+        {
+          "file": "observations.csv",
+          "optional": true,
+          "columns": [
+            "observation_id",
+            "person_token",
+            "household_token",
+            "session_id",
+            "stage",
+            "result",
+            "note"
+          ],
+          "key": "observation_id"
+        },
+        {
+          "file": "feedback.csv",
+          "optional": true,
+          "columns": [
+            "feedback_id",
+            "household_token",
+            "session_id",
+            "submitted_by",
+            "rating",
+            "confidence",
+            "submitted_at"
+          ],
+          "key": "feedback_id"
+        }
+      ]
+    }
+  },
+  "mapping_correction_impact": null,
+  "conclusions": [
+    {
+      "course_version": "C1",
+      "topic": "先秦货币",
+      "topic_label": "先秦货币",
+      "taught_in_sessions": [
+        "S01"
+      ],
+      "evidence_sessions": [
+        "S01"
+      ],
+      "session_ids": [
+        "S01"
+      ],
+      "stage": "share",
+      "is_formally_taught_this_version": true,
+      "provenance": {
+        "input_scope": [
+          "session:S01"
+        ],
+        "form_versions": [
+          "F1"
+        ],
+        "item_ids": [
+          "Q1"
+        ],
+        "mapping_windows": [
+          "F1/Q1:2026-08-01..2026-09-30"
+        ]
+      },
+      "population": {
+        "attended_independent_persons": [
+          "P01",
+          "P02"
+        ],
+        "n_attended_independent": 2,
+        "assisted_persons": [],
+        "n_assisted": 0,
+        "n_households": 1
+      },
+      "status_counts": {
+        "correct": 1,
+        "wrong": 2,
+        "not_answered": 1,
+        "not_attended": 2,
+        "indeterminate": 0
+      },
+      "status_counts_zh": {
+        "答对": 1,
+        "答错": 2,
+        "未作答": 1,
+        "未参加": 2,
+        "无法判断": 0
+      },
+      "reason_counts": {
+        "no_response_row": 1,
+        "absent_record": 2
+      },
+      "pairs": [
+        {
+          "person_token": "P01",
+          "household_token": "H01",
+          "session_id": "S01",
+          "course_version": "C1",
+          "session_topic": "先秦货币",
+          "item_id": "Q1",
+          "form_version": "F1",
+          "mapped_topic": "先秦货币",
+          "pre_status": "wrong",
+          "post_status": "correct",
+          "pre_response_id": "R01",
+          "post_response_id": "R02",
+          "outcome": "improved",
+          "household_independent": true,
+          "excluded_reason": null,
+          "topic_mismatch": false
+        },
+        {
+          "person_token": "P02",
+          "household_token": "H01",
+          "session_id": "S01",
+          "course_version": "C1",
+          "session_topic": "先秦货币",
+          "item_id": "Q1",
+          "form_version": "F1",
+          "mapped_topic": "先秦货币",
+          "pre_status": "not_answered",
+          "post_status": "wrong",
+          "pre_response_id": null,
+          "post_response_id": "R03",
+          "outcome": null,
+          "household_independent": true,
+          "excluded_reason": "至少一侧不是可判定的答对/答错状态",
+          "topic_mismatch": false
+        },
+        {
+          "person_token": "P03",
+          "household_token": "H02",
+          "session_id": "S01",
+          "course_version": "C1",
+          "session_topic": "先秦货币",
+          "item_id": "Q1",
+          "form_version": "F1",
+          "mapped_topic": "先秦货币",
+          "pre_status": "not_attended",
+          "post_status": "not_attended",
+          "pre_response_id": null,
+          "post_response_id": null,
+          "outcome": null,
+          "household_independent": true,
+          "excluded_reason": "至少一侧不是可判定的答对/答错状态",
+          "topic_mismatch": false
+        }
+      ],
+      "topic_mismatch_pairs": [],
+      "pair_summary": {
+        "n_gradeable_pairs": 1,
+        "outcomes": {
+          "improved": 1,
+          "regressed": 0,
+          "stable_correct": 0,
+          "stable_wrong": 0
+        },
+        "improvement_rate": 1.0,
+        "mastery_retention_rate": 1.0,
+        "wilson_improvement": {
+          "low": 0.20654329147389294,
+          "high": 1.0,
+          "center": 0.6032716457369465
+        },
+        "independent_pairs": 1,
+        "household_level_pairs": 0
+      },
+      "item_coverage": [
+        {
+          "form_version": "F1",
+          "item_id": "Q1",
+          "mapping_valid_from": "2026-08-01",
+          "mapping_valid_to": "2026-09-30",
+          "status_counts_zh": {
+            "答错": 2,
+            "答对": 1,
+            "未作答": 1,
+            "未参加": 2
+          },
+          "n_evidence_cells": 6
+        }
+      ],
+      "comparability": {
+        "comparable_within_version": true,
+        "form_versions": [
+          "F1"
+        ],
+        "cross_form_excluded_pairs": [],
+        "notes": [],
+        "scope_label": "同场次+同人+同量表版本的可判前后测配对"
+      },
+      "uncertainties": [
+        "可判配对仅 1 人，个体差异影响大，不宜据此做确定性改课决策",
+        "改善率置信区间很宽，比例仅供参考"
+      ],
+      "topic_mismatch_evidence_count": 0,
+      "recommendation": {
+        "action": "collect_more_evidence",
+        "label_zh": "证据不足：保留内容并继续收集配对",
+        "basis": [
+          "可判前后测配对 1 对，低于建议阈值 3；结论只能作为线索，建议保留内容并在下一轮继续收集同量表配对证据。"
+        ],
+        "secondary_signals": [
+          "已出现 1 例错→对改善且无回退，方向积极，但样本不足"
+        ],
+        "affected_by_mapping_change": false
+      },
+      "mapping_fingerprints": [
+        "F1|Q1|2026-08-01|2026-09-30"
+      ]
+    },
+    {
+      "course_version": "C2",
+      "topic": "先秦货币",
+      "topic_label": "先秦货币",
+      "taught_in_sessions": [
+        "S03"
+      ],
+      "evidence_sessions": [
+        "S03"
+      ],
+      "session_ids": [
+        "S03"
+      ],
+      "stage": "share",
+      "is_formally_taught_this_version": true,
+      "provenance": {
+        "input_scope": [
+          "session:S03"
+        ],
+        "form_versions": [
+          "F2"
+        ],
+        "item_ids": [
+          "Q1"
+        ],
+        "mapping_windows": [
+          "F2/Q1:2026-10-01..至今"
+        ]
+      },
+      "population": {
+        "attended_independent_persons": [
+          "P04"
+        ],
+        "n_attended_independent": 1,
+        "assisted_persons": [],
+        "n_assisted": 0,
+        "n_households": 1
+      },
+      "status_counts": {
+        "correct": 0,
+        "wrong": 0,
+        "not_answered": 2,
+        "not_attended": 1,
+        "indeterminate": 1
+      },
+      "status_counts_zh": {
+        "答对": 0,
+        "答错": 0,
+        "未作答": 2,
+        "未参加": 1,
+        "无法判断": 1
+      },
+      "reason_counts": {
+        "no_attendance_record": 1,
+        "response_without_attendance": 1,
+        "no_response_row": 2
+      },
+      "pairs": [
+        {
+          "person_token": "P01",
+          "household_token": "H01",
+          "session_id": "S03",
+          "course_version": "C2",
+          "session_topic": "先秦货币",
+          "item_id": "Q1",
+          "form_version": "F2",
+          "mapped_topic": "先秦货币",
+          "pre_status": "not_attended",
+          "post_status": "indeterminate",
+          "pre_response_id": null,
+          "post_response_id": "R04",
+          "outcome": null,
+          "household_independent": true,
+          "excluded_reason": "至少一侧不是可判定的答对/答错状态",
+          "topic_mismatch": false
+        },
+        {
+          "person_token": "P04",
+          "household_token": "H03",
+          "session_id": "S03",
+          "course_version": "C2",
+          "session_topic": "先秦货币",
+          "item_id": "Q1",
+          "form_version": "F2",
+          "mapped_topic": "先秦货币",
+          "pre_status": "not_answered",
+          "post_status": "not_answered",
+          "pre_response_id": null,
+          "post_response_id": null,
+          "outcome": null,
+          "household_independent": true,
+          "excluded_reason": "至少一侧不是可判定的答对/答错状态",
+          "topic_mismatch": false
+        }
+      ],
+      "topic_mismatch_pairs": [],
+      "pair_summary": {
+        "n_gradeable_pairs": 0,
+        "outcomes": {
+          "improved": 0,
+          "regressed": 0,
+          "stable_correct": 0,
+          "stable_wrong": 0
+        },
+        "improvement_rate": null,
+        "mastery_retention_rate": null,
+        "wilson_improvement": null,
+        "independent_pairs": 0,
+        "household_level_pairs": 0
+      },
+      "item_coverage": [
+        {
+          "form_version": "F2",
+          "item_id": "Q1",
+          "mapping_valid_from": "2026-10-01",
+          "mapping_valid_to": null,
+          "status_counts_zh": {
+            "未参加": 1,
+            "无法判断": 1,
+            "未作答": 2
+          },
+          "n_evidence_cells": 4
+        }
+      ],
+      "comparability": {
+        "comparable_within_version": false,
+        "form_versions": [
+          "F2"
+        ],
+        "cross_form_excluded_pairs": [],
+        "notes": [
+          "没有同一量表版本、两侧均可判的配对，不能声称观察到学习变化"
+        ],
+        "scope_label": "同场次+同人+同量表版本的可判前后测配对"
+      },
+      "uncertainties": [
+        "没有可判定的前后测配对，结论只能描述参与与作答状态，不能描述学习变化量",
+        "1 份作答查无签到，未计入独立学习证据"
+      ],
+      "topic_mismatch_evidence_count": 0,
+      "recommendation": {
+        "action": "collect_more_evidence",
+        "label_zh": "证据不足：保留内容并继续收集配对",
+        "basis": [
+          "可判前后测配对 0 对，低于建议阈值 3；结论只能作为线索，建议保留内容并在下一轮继续收集同量表配对证据。"
+        ],
+        "secondary_signals": [],
+        "affected_by_mapping_change": false
+      },
+      "mapping_fingerprints": [
+        "F2|Q1|2026-10-01|"
+      ]
+    },
+    {
+      "course_version": "C2",
+      "topic": "晋商信用",
+      "topic_label": "晋商信用",
+      "taught_in_sessions": [],
+      "evidence_sessions": [
+        "S03"
+      ],
+      "session_ids": [
+        "S03"
+      ],
+      "stage": "share",
+      "is_formally_taught_this_version": false,
+      "provenance": {
+        "input_scope": [
+          "session:S03"
+        ],
+        "form_versions": [
+          "F2"
+        ],
+        "item_ids": [
+          "Q2"
+        ],
+        "mapping_windows": [
+          "F2/Q2:2026-10-01..至今"
+        ]
+      },
+      "population": {
+        "attended_independent_persons": [],
+        "n_attended_independent": 0,
+        "assisted_persons": [],
+        "n_assisted": 0,
+        "n_households": 0
+      },
+      "status_counts": {
+        "correct": 1,
+        "wrong": 0,
+        "not_answered": 1,
+        "not_attended": 2,
+        "indeterminate": 0
+      },
+      "status_counts_zh": {
+        "答对": 1,
+        "答错": 0,
+        "未作答": 1,
+        "未参加": 2,
+        "无法判断": 0
+      },
+      "reason_counts": {
+        "no_attendance_record": 2,
+        "no_response_row": 1,
+        "item_topic_differs_from_session": 1
+      },
+      "pairs": [
+        {
+          "person_token": "P01",
+          "household_token": "H01",
+          "session_id": "S03",
+          "course_version": "C2",
+          "session_topic": "先秦货币",
+          "item_id": "Q2",
+          "form_version": "F2",
+          "mapped_topic": "晋商信用",
+          "pre_status": "not_attended",
+          "post_status": "not_attended",
+          "pre_response_id": null,
+          "post_response_id": null,
+          "outcome": null,
+          "household_independent": true,
+          "excluded_reason": "至少一侧不是可判定的答对/答错状态",
+          "topic_mismatch": false
+        }
+      ],
+      "topic_mismatch_pairs": [
+        {
+          "person_token": "P04",
+          "household_token": "H03",
+          "session_id": "S03",
+          "course_version": "C2",
+          "session_topic": "先秦货币",
+          "item_id": "Q2",
+          "form_version": "F2",
+          "mapped_topic": "晋商信用",
+          "pre_status": "not_answered",
+          "post_status": "correct",
+          "pre_response_id": null,
+          "post_response_id": "R05",
+          "outcome": null,
+          "household_independent": true,
+          "excluded_reason": "至少一侧不是可判定的答对/答错状态",
+          "topic_mismatch": true
+        }
+      ],
+      "pair_summary": {
+        "n_gradeable_pairs": 0,
+        "outcomes": {
+          "improved": 0,
+          "regressed": 0,
+          "stable_correct": 0,
+          "stable_wrong": 0
+        },
+        "improvement_rate": null,
+        "mastery_retention_rate": null,
+        "wilson_improvement": null,
+        "independent_pairs": 0,
+        "household_level_pairs": 0
+      },
+      "item_coverage": [
+        {
+          "form_version": "F2",
+          "item_id": "Q2",
+          "mapping_valid_from": "2026-10-01",
+          "mapping_valid_to": null,
+          "status_counts_zh": {
+            "未参加": 2,
+            "未作答": 1,
+            "答对": 1
+          },
+          "n_evidence_cells": 4
+        }
+      ],
+      "comparability": {
+        "comparable_within_version": false,
+        "form_versions": [
+          "F2"
+        ],
+        "cross_form_excluded_pairs": [],
+        "notes": [
+          "没有同一量表版本、两侧均可判的配对，不能声称观察到学习变化"
+        ],
+        "scope_label": "同场次+同人+同量表版本的可判前后测配对"
+      },
+      "uncertainties": [
+        "没有可判定的前后测配对，结论只能描述参与与作答状态，不能描述学习变化量"
+      ],
+      "topic_mismatch_evidence_count": 0,
+      "recommendation": {
+        "action": "not_in_curriculum_this_version",
+        "label_zh": "本版次未安排该主题：外部作答不能评价教学",
+        "basis": [
+          "该课程版次没有以本主题命名的场次；现有对错证据来自主题错位或无签到作答，只能说明有人会/不会这道题，不能作为本轮教学效果，也不产生重讲结论。教研组应先决定是否把该主题正式排入课程，再配置对应前后测。"
+        ],
+        "secondary_signals": [],
+        "affected_by_mapping_change": false
+      },
+      "mapping_fingerprints": [
+        "F2|Q2|2026-10-01|"
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "code": "response_without_attendance",
+      "severity": "warning",
+      "message": "作答 R04（P01 / S03 / Q1 / post）查无对应环节签到，已标为无法判断，不计入独立学习变化",
+      "refs": {
+        "response_id": "R04",
+        "person_token": "P01"
+      }
+    }
+  ],
+  "pairs": [
+    {
+      "person_token": "P01",
+      "household_token": "H01",
+      "session_id": "S01",
+      "course_version": "C1",
+      "session_topic": "先秦货币",
+      "item_id": "Q1",
+      "form_version": "F1",
+      "mapped_topic": "先秦货币",
+      "pre_status": "wrong",
+      "post_status": "correct",
+      "pre_response_id": "R01",
+      "post_response_id": "R02",
+      "outcome": "improved",
+      "household_independent": true,
+      "excluded_reason": null,
+      "topic_mismatch": false
+    },
+    {
+      "person_token": "P01",
+      "household_token": "H01",
+      "session_id": "S03",
+      "course_version": "C2",
+      "session_topic": "先秦货币",
+      "item_id": "Q1",
+      "form_version": "F2",
+      "mapped_topic": "先秦货币",
+      "pre_status": "not_attended",
+      "post_status": "indeterminate",
+      "pre_response_id": null,
+      "post_response_id": "R04",
+      "outcome": null,
+      "household_independent": true,
+      "excluded_reason": "至少一侧不是可判定的答对/答错状态",
+      "topic_mismatch": false
+    },
+    {
+      "person_token": "P01",
+      "household_token": "H01",
+      "session_id": "S03",
+      "course_version": "C2",
+      "session_topic": "先秦货币",
+      "item_id": "Q2",
+      "form_version": "F2",
+      "mapped_topic": "晋商信用",
+      "pre_status": "not_attended",
+      "post_status": "not_attended",
+      "pre_response_id": null,
+      "post_response_id": null,
+      "outcome": null,
+      "household_independent": true,
+      "excluded_reason": "至少一侧不是可判定的答对/答错状态",
+      "topic_mismatch": false
+    },
+    {
+      "person_token": "P02",
+      "household_token": "H01",
+      "session_id": "S01",
+      "course_version": "C1",
+      "session_topic": "先秦货币",
+      "item_id": "Q1",
+      "form_version": "F1",
+      "mapped_topic": "先秦货币",
+      "pre_status": "not_answered",
+      "post_status": "wrong",
+      "pre_response_id": null,
+      "post_response_id": "R03",
+      "outcome": null,
+      "household_independent": true,
+      "excluded_reason": "至少一侧不是可判定的答对/答错状态",
+      "topic_mismatch": false
+    },
+    {
+      "person_token": "P03",
+      "household_token": "H02",
+      "session_id": "S01",
+      "course_version": "C1",
+      "session_topic": "先秦货币",
+      "item_id": "Q1",
+      "form_version": "F1",
+      "mapped_topic": "先秦货币",
+      "pre_status": "not_attended",
+      "post_status": "not_attended",
+      "pre_response_id": null,
+      "post_response_id": null,
+      "outcome": null,
+      "household_independent": true,
+      "excluded_reason": "至少一侧不是可判定的答对/答错状态",
+      "topic_mismatch": false
+    },
+    {
+      "person_token": "P04",
+      "household_token": "H03",
+      "session_id": "S03",
+      "course_version": "C2",
+      "session_topic": "先秦货币",
+      "item_id": "Q1",
+      "form_version": "F2",
+      "mapped_topic": "先秦货币",
+      "pre_status": "not_answered",
+      "post_status": "not_answered",
+      "pre_response_id": null,
+      "post_response_id": null,
+      "outcome": null,
+      "household_independent": true,
+      "excluded_reason": "至少一侧不是可判定的答对/答错状态",
+      "topic_mismatch": false
+    },
+    {
+      "person_token": "P04",
+      "household_token": "H03",
+      "session_id": "S03",
+      "course_version": "C2",
+      "session_topic": "先秦货币",
+      "item_id": "Q2",
+      "form_version": "F2",
+      "mapped_topic": "晋商信用",
+      "pre_status": "not_answered",
+      "post_status": "correct",
+      "pre_response_id": null,
+      "post_response_id": "R05",
+      "outcome": null,
+      "household_independent": true,
+      "excluded_reason": "至少一侧不是可判定的答对/答错状态",
+      "topic_mismatch": true
+    }
+  ],
+  "pair_findings": [],
+  "household_conflicts": [],
+  "household_rollup": [
+    {
+      "household_token": "H01",
+      "attended_members": [
+        "P01",
+        "P02"
+      ],
+      "n_attended_members": 2,
+      "persons_with_attributable_answers": [
+        "P01",
+        "P02"
+      ],
+      "n_individual_answer_streams": 2,
+      "n_gradeable_pairs": 1,
+      "n_distinct_persons_with_pairs": 1,
+      "pairs_count_as_independent_person_evidence": 1,
+      "proxy_feedback_entries": 1,
+      "rule": "家庭共同/代填内容按一户一条；可归属到不同个人的作答才作为不同个人证据"
+    },
+    {
+      "household_token": "H02",
+      "attended_members": [],
+      "n_attended_members": 0,
+      "persons_with_attributable_answers": [],
+      "n_individual_answer_streams": 0,
+      "n_gradeable_pairs": 0,
+      "n_distinct_persons_with_pairs": 0,
+      "pairs_count_as_independent_person_evidence": 0,
+      "proxy_feedback_entries": 0,
+      "rule": "家庭共同/代填内容按一户一条；可归属到不同个人的作答才作为不同个人证据"
+    },
+    {
+      "household_token": "H03",
+      "attended_members": [
+        "P04"
+      ],
+      "n_attended_members": 1,
+      "persons_with_attributable_answers": [
+        "P04"
+      ],
+      "n_individual_answer_streams": 1,
+      "n_gradeable_pairs": 0,
+      "n_distinct_persons_with_pairs": 0,
+      "pairs_count_as_independent_person_evidence": 0,
+      "proxy_feedback_entries": 1,
+      "rule": "家庭共同/代填内容按一户一条；可归属到不同个人的作答才作为不同个人证据"
+    }
+  ],
+  "observations": {
+    "available": true,
+    "sessions": {
+      "S01": {
+        "topic": "先秦货币",
+        "status": "not_applicable",
+        "note": "知识分享场次，掌握情况以前后测为准，不要求拓印观察",
+        "observations": []
+      },
+      "S02": {
+        "topic": "晋商信用",
+        "status": "not_applicable",
+        "note": "知识分享场次，掌握情况以前后测为准，不要求拓印观察",
+        "observations": []
+      },
+      "S03": {
+        "topic": "先秦货币",
+        "status": "not_applicable",
+        "note": "知识分享场次，掌握情况以前后测为准，不要求拓印观察",
+        "observations": []
+      },
+      "S04": {
+        "topic": "拓印实践",
+        "status": "observed",
+        "result_counts": {
+          "independent": 1,
+          "assisted": 1
+        },
+        "observations": [
+          {
+            "person_token": "P04",
+            "household_token": "H03",
+            "result": "independent",
+            "note": "能独立完成上纸与捶拓"
+          },
+          {
+            "person_token": "P05",
+            "household_token": "H03",
+            "result": "assisted",
+            "note": "需成人全程协助揭纸"
+          }
+        ]
+      }
+    }
+  },
+  "feedback": {
+    "available": true,
+    "household_entries": [
+      {
+        "feedback_id": "F01",
+        "household_token": "H01",
+        "session_id": "S01",
+        "submitted_by": "P02代填",
+        "rating": 5.0,
+        "confidence": "high",
+        "submitted_at": "2026-09-02T11:00:00",
+        "evidence_role": "household_level_perception_only",
+        "note": "家庭代填/合填问卷：按一户一条处理，不计为多名参与者的独立证据，也不用于推断学习变化。"
+      },
+      {
+        "feedback_id": "F02",
+        "household_token": "H03",
+        "session_id": "S04",
+        "submitted_by": "P04家庭合填",
+        "rating": 4.0,
+        "confidence": "medium",
+        "submitted_at": "2026-10-17T12:00:00",
+        "evidence_role": "household_level_perception_only",
+        "note": "家庭代填/合填问卷：按一户一条处理，不计为多名参与者的独立证据，也不用于推断学习变化。"
+      }
+    ],
+    "n_household_responses": 2,
+    "mean_rating": 4.5,
+    "note": "反馈仅表示家庭层面的主观感受，与知识掌握证据分开呈现。"
+  },
+  "participation": {
+    "sessions": [
+      {
+        "session_id": "S01",
+        "course_version": "C1",
+        "topic": "先秦货币",
+        "n_distinct_people_on_roster": 3,
+        "n_attended_any_stage": 2,
+        "n_assisted": 0,
+        "n_absent_records": 1,
+        "warning": "不能用签到人数代替完成整套课程人数：各环节到场分别统计，且只有配对作答能支持学习变化"
+      },
+      {
+        "session_id": "S02",
+        "course_version": "C1",
+        "topic": "晋商信用",
+        "n_distinct_people_on_roster": 1,
+        "n_attended_any_stage": 1,
+        "n_assisted": 0,
+        "n_absent_records": 0,
+        "warning": "不能用签到人数代替完成整套课程人数：各环节到场分别统计，且只有配对作答能支持学习变化"
+      },
+      {
+        "session_id": "S03",
+        "course_version": "C2",
+        "topic": "先秦货币",
+        "n_distinct_people_on_roster": 1,
+        "n_attended_any_stage": 1,
+        "n_assisted": 0,
+        "n_absent_records": 0,
+        "warning": "不能用签到人数代替完成整套课程人数：各环节到场分别统计，且只有配对作答能支持学习变化"
+      },
+      {
+        "session_id": "S04",
+        "course_version": "C2",
+        "topic": "拓印实践",
+        "n_distinct_people_on_roster": 2,
+        "n_attended_any_stage": 1,
+        "n_assisted": 1,
+        "n_absent_records": 0,
+        "warning": "不能用签到人数代替完成整套课程人数：各环节到场分别统计，且只有配对作答能支持学习变化"
+      }
+    ]
+  },
+  "thresholds": {
+    "min_pairs_for_strong_claim": 3
+  }
+}
