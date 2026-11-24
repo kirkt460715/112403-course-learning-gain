@@ -1,0 +1,48 @@
+{
+  "tables": [
+    {
+      "file": "sessions.csv",
+      "columns": [
+        "session_id",
+        "course_version",
+        "topic",
+        "start_date",
+        "end_date"
+      ],
+      "key": "session_id"
+    },
+    {
+      "file": "attendance.csv",
+      "columns": [
+        "person_token",
+        "household_token",
+        "session_id",
+        "stage",
+        "status"
+      ]
+    },
+    {
+      "file": "responses.csv",
+      "columns": [
+        "response_id",
+        "person_token",
+        "session_id",
+        "form_version",
+        "item_id",
+        "answer",
+        "submitted_at"
+      ],
+      "key": "response_id"
+    },
+    {
+      "file": "measurements.csv",
+      "columns": [
+        "form_version",
+        "item_id",
+        "topic",
+        "valid_from",
+        "valid_to"
+      ]
+    }
+  ]
+}

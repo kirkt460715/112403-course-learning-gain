@@ -1,0 +1,5 @@
+response_id,person_token,session_id,form_version,item_id,answer,submitted_at
+R01,P01,S01,F1,Q1,A,2026-09-02T10:15:00
+R02,P02,S01,F1,Q1,A,2026-09-02T10:16:00
+R03,P01,S03,F2,Q1,B,2026-10-03T10:12:00
+R04,P04,S03,F2,Q2,A,2026-10-03T10:17:00

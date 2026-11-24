@@ -1,0 +1,9 @@
+person_token,household_token,session_id,stage,status
+P01,H01,S01,share,attended
+P01,H01,S01,rubbing,attended
+P02,H01,S01,share,attended
+P03,H02,S01,share,absent
+P01,H01,S02,share,attended
+P04,H03,S03,share,attended
+P04,H03,S04,rubbing,attended
+P05,H03,S04,rubbing,assisted
